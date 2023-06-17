@@ -1,27 +1,90 @@
 @import url(typography.css);
 
 /* estilização e personalização menu responsivo */
+.container-page1 {
+    min-height: 100vh;
+}
+
+
 nav {
     display: flex;
     align-items: center;
     height: 70px;
     justify-content: space-between;
-    background-color: #9EB0FF; 
-    padding: 0.8rem;
+    /* background-color: #011E11;  */
 }
+
+#btn-mobile {
+    display: flex;       
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+#hamburger {
+    display: block;
+    width: 20px;
+    border-top: 2px solid white;
+    transition: .3s;
+}
+
+#hamburger::after, #hamburger::before {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    transition: .6s;     
+    position: relative;
+}
+
+#container-menu.active  #hamburger {
+    border-top-color: transparent;
+}
+
+#container-menu.active  #hamburger::before {
+    transform: rotate(135deg);
+}
+
+#container-menu.active  #hamburger::after {
+    transform: rotate(-135deg);    
+    top: -7px;
+}       
+
+ul#menu { 
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    background-color: #bbd6ca;
+    text-align: center; 
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .6s;
+    z-index: 1000;
+}
+
+#container-menu.active ul#menu  {    
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+}
+
 
 .fa-solid {
     margin-right: 0.5rem;
 }
 
-#btn-mobile {
-    display: none;
-}
-
 ul#menu {
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 
 ul#menu li a {
@@ -29,13 +92,10 @@ ul#menu li a {
     color: rgb(56, 54, 54);
     text-decoration: none;
     padding: 0.8rem 1rem;
+    color: #FFFFFF;
 }
 
-ul#menu li a:hover {
-    cursor: pointer;
-    background-color: rgb(162, 169, 175);
-}
-
+/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -45,107 +105,34 @@ ul#menu li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color:#5271FF;
     border-radius: 0.5rem;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transition: .8s;
 }
 
+
+
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #788ff3;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/* Dropdown */
 
 
-@media screen and (max-width: 40em) {
-    #btn-mobile {
-        display: flex;       
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: .5rem;
-    }
 
-    #hamburger {
-        display: block;
-        width: 20px;
-        border-top: 2px solid;
-        transition: .3s;
-    }
 
-    #hamburger::after, #hamburger::before {
-        content: "";
-        display: block;
-        margin-top: 5px;
-        width: 20px;
-        height: 2px;
-        background-color: currentColor;
-        transition: .6s;     
-        position: relative;
-    }
-
-    #container-menu.active  #hamburger {
-        border-top-color: transparent;
-    }
-
-    #container-menu.active  #hamburger::before {
-        transform: rotate(135deg);
-    }
-
-    #container-menu.active  #hamburger::after {
-        transform: rotate(-135deg);    
-        top: -7px;
-    } 
-
-    ul#menu { 
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 70px;
-        right: 0;
-        background-color: #9EB0FF;
-        text-align: center; 
-        height: 0px;
-        visibility: hidden;
-        overflow-y: hidden;
-        transition: .6s;
-        z-index: 1000;
-    }
-
-    #container-menu.active ul#menu  {    
-        height: calc(100vh - 70px);
-        visibility: visible;
-        overflow-y: auto;
-    }
-    
-
-    ul#menu li a {
-        padding: 1rem 0;
-    } 
-}
 
 /* estilização e personalização menu responsivo */
 
 /* Header */
-.image-container img {
-    clip-path: path('M13.100000381469727,0.0 L0.0,189.39999389648438 L39.5,268.29998779296875 L44.70000076293945,386.70001220703125 L328.79998779296875,499.79998779296875 L399.79998779296875,69.69999694824219 L136.8000030517578,78.9000015258789 L13.100000381469727,0.0');
+
+/* header .image-container img {
     width: 400px;
-}
-
-header {
-    background-color: #9EB0FF;
-}
-
-.header-container {
-    padding-top: 2rem;
-    margin: 0 1rem;  
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    clip-path: path('M13.100000381469727,0.0 L0.0,189.39999389648438 L39.5,268.29998779296875 L44.70000076293945,386.70001220703125 L328.79998779296875,499.79998779296875 L399.79998779296875,69.69999694824219 L136.8000030517578,78.9000015258789 L13.100000381469727,0.0');
 }
