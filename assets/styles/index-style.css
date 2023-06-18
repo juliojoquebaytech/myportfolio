@@ -6,12 +6,18 @@
 }
 
 
+.container-nav-bg {
+    background-color: rgba(1, 30, 17, 0.7); 
+}
+
 nav {
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     height: 70px;
+    padding: 15px;
     justify-content: space-between;
-    background-color: rgba(1, 30, 17, 0.7); 
 }
 
 #btn-mobile {
@@ -91,7 +97,12 @@ ul#menu li a {
     text-decoration: none;
     padding: 1.5rem 1rem;
     color: #FFFFFF;
+    transition: .4s;
 }
+
+/* ul#menu li a:hover {
+    transform: scale(1.1);
+} */
 
 /* Dropdown */
 .dropdown {
