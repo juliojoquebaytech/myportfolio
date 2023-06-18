@@ -40,29 +40,55 @@
     <script src="https://kit.fontawesome.com/78b2e51304.js" crossorigin="anonymous"></script>
 </head>
 <body>
-     <div class="container-page1"> <!-- container-page1 --> 
-        <div class="container-nav-bg">
-            <nav> <!-- nav --> 
-                    <a id="logo" href="../assets/images/logo.svg">
-                        <img src="../assets/images/logo.svg" width="50" alt="Logo Julio Joquebay">
-                    </a>
-                    <div id="container-menu"> <!-- container-menu -->
-                        <button id="btn-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span id="hamburger"></span></button>
-                        <ul id="menu" role="menu">
-                            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-                            <li><a href="#"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
-                            <li class="dropdown"><a href="#"><i class="fa-solid fa-briefcase"></i>Meus Projetos</a>
-                                <div class="dropdown-content">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                                </div>
-                            </li>
-                            <li><a href="#"><i class="fa-solid fa-comments"></i>Contato</a></li>
+      <div class="page1">
+            <div class="container-nav-bg"> <!-- container-nav-bg --> 
+                <nav> <!-- nav --> 
+                        <a id="logo" href="../assets/images/logo.svg">
+                            <img src="../assets/images/logo.svg" width="50" alt="Logo Julio Joquebay">
+                        </a>
+                        <div id="container-menu"> <!-- container-menu -->
+                            <button id="btn-mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span id="hamburger"></span></button>
+                            <ul id="menu" role="menu">
+                                <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                                <li><a href="#"><i class="fa-solid fa-address-card"></i>Sobre mim</a></li>
+                                <li class="dropdown"><a href="#"><i class="fa-solid fa-caret-down"></i>Meus Projetos</a>
+                                    <div class="dropdown-content">
+                                        <a class="link-dropdown" href="#">Link 1</a>
+                                        <a class="link-dropdown" href="#">Link 2</a>
+                                        <a class="link-dropdown" href="#">Link 3</a>
+                                    </div>
+                                </li>
+                                <li><a href="#"><i class="fa-solid fa-comments"></i>Contato</a></li>
+                            </ul>
+                        </div> <!-- container-menu -->        
+                </nav> <!-- nav -->
+            </div> <!-- container-nav-bg -->
+
+            <div class="container-header-bg"> <!-- container-header-bg --> 
+                <header>
+                    <div class="text"> <!-- text -->
+                        <h1>Julio Joquebay</h1>
+                        <ul class="social">
+                            <li><a href="#linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#github"><i class="fa-brands fa-github-alt"></i></a></li>
+                            <li><a href="#instagram"><i class="fa-brands fa-instagram"></i></a></li> 
+                            <li><a href="#facebook"><i class="fa-brands fa-facebook"></i></a></li> 
+                            <li><a href="#youtube"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
-                    </div> <!-- container-menu -->        
-            </nav> <!-- nav -->
-        </div> <!-- container-nav-bg -->
-    </div> <!-- container-page1 --> 
+                        <div class="container-button">
+                            <button>Curriculum</button>
+                        </div>
+                    </div> <!-- text -->
+
+                    <div class="container-image"> <!-- container-image -->
+                        <img class="image" src="./assets/images/juliojoquebayheaderimage.png" alt="JULIO JOQUEBAY">
+                        <div class="middle">
+                            <a class="text-image" href="#">Curriculum</a>
+                        </div>
+                    </div> <!-- container-image -->
+                
+                </header>
+            </div> <!-- container-header-bg --> 
+        </div>
 </body>
 </html>
