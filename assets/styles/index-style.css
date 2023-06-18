@@ -68,8 +68,8 @@ nav {
 
 #hamburger {
     display: block;
-    width: 20px;
-    border-top: 2px solid var(--color-palette-black);
+    width: 30px;
+    border-top: 4px solid var(--color-palette-black);
     transition: .3s;
 }
 
@@ -77,8 +77,8 @@ nav {
     content: "";
     display: block;
     margin-top: 5px;
-    width: 20px;
-    height: 2px;
+    width: 30px;
+    height: 4px;
     background-color: var(--color-palette-black);
     transition: .4s;     
     position: relative;
@@ -89,12 +89,12 @@ nav {
 }
 
 #container-menu.active  #hamburger::before {
-    transform: rotate(135deg);
+    transform: rotate(137deg);
 }
 
 #container-menu.active  #hamburger::after {
-    transform: rotate(-135deg);    
-    top: -7px;
+    transform: rotate(-137deg);    
+    top: -9px;
 }       
 
 ul#menu { 
