@@ -1,0 +1,27 @@
+:root {
+    --color-palette-black: #011E11;
+    --color-pallete-green: #12FF46;
+    --color-pallete-white: #ffffff;
+    --color-pallete-yellow: #FAFF12;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.text-play p {
+    color: var(--color-pallete-white);
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: justify;
+}
+.container-image-play {
+    padding: 30px 0;
+}
+
+.container-image-play img {
+    border-radius: 10px;
+}
